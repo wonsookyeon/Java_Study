@@ -12,23 +12,31 @@ public class practice01 {
 	public static void main(String[] args) {
 		
 		int count=0;
-		int num;
 		int sum=0;
-		int i;
+		int num;
 		Scanner sc = new Scanner(System.in);
 		
 		
-		for(i = count; ;) {
 		System.out.println("몇개의 숫자를 입력하시겠습니까?");
 		num = sc.nextInt();
-		//숫자를 입력하세요
 		
-		System.out.println(num);
-		}
+		while (count < num) {
+			System.out.printf("%d번째 숫자를 입력하세요." , count+1);
 			
-//		sum +=num;
-		
-//		System.out.println(sum);
+			if (sc.hasNextInt()) {
+				int number = sc.nextInt();
+				if (number % 2 == 0) {
+					sum += number;
+				}
+				count++;
+			} else {
+				sc.nextInt();
+				System.out.println("정확하게 입력해주세요.(정수로 입력)");
+			}
+
+		}
+
+		System.out.println("짝수의 합 : " + sum);
 
 	}
 
