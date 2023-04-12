@@ -14,6 +14,7 @@ public class practice01 {
 		int count=0;
 		int sum=0;
 		int num;
+		
 		Scanner sc = new Scanner(System.in);
 		
 		
@@ -29,9 +30,13 @@ public class practice01 {
 					sum += number;
 				}
 				count++;
-			} else {
+			}else if(sc.hasNextDouble()) {
+				sc.next();
+				System.out.println("실수는 입력 불가입니다. 다시 입력하세요.");
+			}
+			else {
 				sc.nextInt();
-				System.out.println("정확하게 입력해주세요.(정수로 입력)");
+				System.out.println("문자는 입력 불가입니다. 다시 입력하세요.");
 			}
 
 		}
