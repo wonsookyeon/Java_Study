@@ -17,20 +17,16 @@ public class Exam07 {
 		
 		for(int i=0; i<lotto.length; i++) { // 1부터 lotto.length의 값까지
 			int num = (int)(Math.random()*45)+1; // 0~44 까지의 숫자
+			
 			int tmp = lotto[i];
 			lotto[i] = lotto[num];
-			lotto[num] = tmp;
-			
-			  
-			
+			lotto[num] = tmp;	  
 		}
+		
+		
 		System.out.println("이번주 로또 번호는 : ");
 		for(int i=0; i<6; i++)
 			System.out.print(lotto[i] + ",");
-			
-			
-		
-
 		
 	}
 

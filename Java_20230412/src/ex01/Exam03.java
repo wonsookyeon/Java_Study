@@ -12,7 +12,7 @@ public class Exam03 {
 //		num[2] = 30;
 		
 		int [] arrNum = {10,20,30}; // 이렇게 줄여서 할 수 있음.
-//		int [] arrNum = new int {10,20,30};  new int 생략가능. 
+//		int [] arrNum = new int[] {10,20,30};  new int 생략가능. 
 		
 		for(int i=0; i<3; i++)
 			sum += arrNum[i];
