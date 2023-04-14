@@ -14,27 +14,33 @@ public class FunctionExam06 {
 		int total = sumFunction(10);     //  total이라는 변수이름으로 return한 값을 받아줌.
 										//(int num) 으로 올라오기때문에 ()에 정수지정.
 		
-		if(total%2 == 0)
+		if(total%2 == 0)  // total을 2로 나눴을때 나머지가 0인 값 : 짝수
 			System.out.println("짝수 " + total);
-		else
+		else                                    // if 값이 아니면 : 홀수
 			System.out.println("홀수 " + total);
 				
 		
 		System.out.println("Total : " + total);
 		
 		
-		System.out.println("프로그램 끝" + ", ");
+		System.out.println("프로그램 끝");
 	}
 
-		static int sumFunction(int num) {  // 1. 숫자하나를 받아서
-			int sum = 0; 
+		static int sumFunction(int num) {  // 1. 숫자하나(int num)를 받아서
+			int sum = 0; // 합의 초기화, int 지정
 			
-			for(int i=1; i<=num; i++) // 2. 1부터 숫자까지
+			for(int i=1; i<=num; i++) // 2. i=1부터 숫자까지  
 				sum +=i;   // 3. 더해간다.
 			
 			return sum;  // 4. 더한 값을 return해서 위(14줄)로 올려줌↑
 			
 	}
-	
 		
 }
+
+
+
+
+
+
+

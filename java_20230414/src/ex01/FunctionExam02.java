@@ -14,7 +14,7 @@ public class FunctionExam02 {
 		 convertInt(10.5);
 		 add(10,20);  // 반환(return)하는 값이 없으면 이렇게 쓰면 됨.
 		 
-		System.out.println("프로그램 끝" + ", ");
+		System.out.println("프로그램 끝");
 	}
 		
 		

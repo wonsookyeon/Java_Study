@@ -9,11 +9,14 @@ public class FunctionExam05 {
 
 	public static void main(String[] args) {
 		System.out.println("프로그램 시작");
-		
+
+/*★★		int num = add();
+		System.out.println(num);
+*/
 		add(); // 1. 더하기
 		convertInt(); // 2. 실수값 전달 -> 정수로 변환해서 출력	
 		
-		System.out.println("프로그램 끝" + ", ");
+		System.out.println("프로그램 끝");
 	}
 	
 		// 1. 더하기
@@ -22,6 +25,11 @@ public class FunctionExam05 {
 			System.out.println(num);
 		}
 	
+	
+/*★★		static int add() {
+			return (20+20);
+	}
+*/	
 		
 		// 2. 실수값 전달 -> 정수로 변환해서 출력	
 		

@@ -7,12 +7,13 @@ package ex01;
 public class FunctionExam03 {
 
 	public static void main(String[] args) {
+	
 		System.out.println("프로그램 시작");
 		
 		int num = add();  // return 받은 변수를 num에 입력
 		System.out.println(num);
 				
-		System.out.println("프로그램 끝" + ", ");
+		System.out.println("프로그램 끝");
 	}
 	
 	

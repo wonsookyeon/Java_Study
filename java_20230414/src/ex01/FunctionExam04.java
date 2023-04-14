@@ -8,16 +8,21 @@ package ex01;
 public class FunctionExam04 {
 
 	public static void main(String[] args) {
-		System.out.println("프로그램 시작");
 		
-/*		int num = convertInt();  // return 받은 변수를 num에 입력
+		System.out.println("프로그램 시작");
+/*		
+		int num = convertInt();  // return 받은 변수를 num에 입력
 		System.out.println(num);
 		//System.out.println(convertInt());  // num에 입력안하고 이렇게도 가능
-*/		
+		}
+*/	
+	
+		
+		
 		double df = convertInt();
 		System.out.println((int)df);
 		
-		System.out.println("프로그램 끝" + ", ");
+		System.out.println("프로그램 끝");
 	}
 
 		static double convertInt() {
