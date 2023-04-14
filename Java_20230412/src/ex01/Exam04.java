@@ -1,39 +1,43 @@
 package ex01;
 
+/*
+ * 1. int 배열 10개 생성
+ * 2. 랜덤함수 이용해서 10개 초기화
+ * 3. 최대값, 최소값 출력
+ */
 public class Exam04 {
 
 	public static void main(String[] args) {
 		
-//		int[] num = new int[5];
+		int [] num = new int [10];  // 배열생성
 		
-		int[][] num = new int[4][3];  //[행][열]		
-
-		num[2][1] = 100;  // 2행 1열에 100 입력
-
-		int[][] num2 = {
-				{1,2,3,3}, // 4  num2[0]
-				{4,5,6,6,5}, // 5 num2[1]
-				{7,8,9,9,4,5} // 6 num2[2]
-				};
-		
-		for(int i=0; i<3; i++) {   // i 는 행
-			for (int j=0; j<num2[i].length; j++) // j 는 열 //행의 길이가 다를때는 i의 길이로..
-				System.out.print(num2[i][j] + ",");
-			
-			System.out.println();
-		}
-		
-/*		for(int i=0; i<num.length; i++)
-			for(int j=0; j=num[i].length; j++)
-				num[i][j] = (int)(Math.random()*100)+1;
+		for(int i=0; i<num.length; i++) 
+			num[i] = (int)(Math.random()*100)+1;
 		
 		for(int i=0; i<num.length; i++)
-			for(int j=0; j=num[i].length; j++) // j 는 열 //행의 길이가 다를때는 i의 길이로..
-				System.out.print(num[i][j] + ",");
-							
-		System.out.println();
-						}
-*/		
-	}
+			
+			System.out.print(num[i] + ",");
+		System.out.println();  // 줄바꿈
+
+//--------------------------- <랜덤으로 숫자 받아줌>
+		
+		int max = num[0];  // 배열의 첫번째 값으로 최대값을 초기화 한다.
+		int min = num[0];  // 배열의 첫번째 값으로 최소값을 초기화 한다.
+		
+		for(int i=1; i<num.length; i++) {  // 배열의 두번째 요소부터 읽기위해 변수 i의 값을 1로 초기화
+			if(num[i]>max)   // 크기비교 후 false 면 그 다음번째 요소와 비교
+				max=num[i];  
+			
+			if(num[i]<min)
+				min=num[i];
+		}
+		
+			System.out.println("max = " + max);
+			System.out.println("min = " + min);
+		
+		
+		
+			
+		}
 
 }
