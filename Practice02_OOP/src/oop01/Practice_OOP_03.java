@@ -24,17 +24,17 @@ package oop01;
 // 생성자도 메서드이므로 메서드 그룹에 속하는데 제일 상단에 보통 위치한다.
 
 // 3. 예
-class Person{
+class Person1{
 	
 	// 1. 속성(Attribute)
 	int age;
 	String name;
 	
 	// 2. 생성자(Constructor)
-	Person() {} // 객체가 생성이 될 때 (작성하지않아도 자동으로 생성됨)
+	Person1() {} // 객체가 생성이 될 때 (작성하지않아도 자동으로 생성됨), class 이름과 같음.
 	
 	// 3. 메서드(Method)
-	void movw() {
+	void move() {
 		System.out.println("Person is moving.");
 	}
 	
