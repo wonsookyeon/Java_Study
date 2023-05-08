@@ -33,6 +33,7 @@ public class MyFirstStream2 {
 		
 		//1. 장난감 가격이 500 이상 제품의 합은 얼마인가?
 //		Stream<ToyPriceInfo> stream = list.stream();      
+//		int sum = stream.filter(n->n.getPrice()>=500).mapToInt(n->n.getPrice()).sum();
 		        //생략하고 ↓                                 //가격을 숫자로 인지시킴(스트림 요소변환)
 		int sum = list.stream().filter(n->n.getPrice()>=500).mapToInt(n->n.getPrice()).sum();
 		                              //가격이 500이상인 제품의 가격                //제품의 값 // 합
