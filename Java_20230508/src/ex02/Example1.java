@@ -1,13 +1,11 @@
 package ex02;
 
-import java.util.AbstractSequentialList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Predicate;
+import java.util.Map;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-public class Member{
+class Member{
 	private String name;
 	private String job;
 	
@@ -24,7 +22,11 @@ public class Member{
 		return job;
 	}
 	
-
+    @Override
+    public String toString() {
+       return "{name:" + name + ", job:" + job +"}";
+    }
+ 
 	
 }
 
@@ -38,16 +40,27 @@ public class Example1 {
 				new Member("신용권", "개발자")
 				);
 		
-		List<Member> developers = list.stream()
-				.collect(Collectors.groupingBy(Member::getJob,Collectors.mapping(Member::getName, Collectors.toList())));
+        Map<String, List<Member>> groupingMap = list.stream()
+                .collect(Collectors.groupingBy(Member::getJob));
+         
+         System.out.println("[개발자]");
+         groupingMap.get("개발자").forEach(m-> System.out.println(m.toString()));
+         System.out.println();
+         System.out.println("[디자이너]");
+         groupingMap.get("디자이너").forEach(m-> System.out.println(m.toString()));
+        }
+   }
+		
+//		List<Member> developers = list.stream()
+//				.collect(Collectors.groupingBy(Member::getJob));
 		
 //		List<Member> developers = list.stream().filter(m->m.getJob().contains("개발자"))
 //				.map(Member::getName).collect(Collectors.toList());
 		
 		
-		developers.stream().forEach(m-> System.out.println(m.getName()));
-		
-
-	}
-
-}
+//		developers.stream().forEach(m-> System.out.println(m.getName()));
+//		
+//
+//	}
+//
+//}
