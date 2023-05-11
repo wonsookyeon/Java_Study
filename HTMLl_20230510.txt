@@ -30,5 +30,41 @@ Live Server 다운로드 (저장만 하면 바로 실행되는 프로그램)
 <td> ~ </td> : 셀 (일반글씨)
   -> colspan : 행 합치기, rowspan: 열 합치기
 border-collapse : 표의 테두리, 기본은 Seperate, collapse로 설정하면 실선으로 변경
+-----------------------------------------------------------------------------------------------
+20230511
+<caption> 표 제목
+-table 각 열의 의미에 따라-
+<thead> 제목
+<tbody> 본문
+<tfoot> 요약
 
+<img> 사진
+  -> alt 사진이 없을때 대체
+<a> 사진클릭
+  -> href="https://www.naver.com" 네이버로 이동 / <P> 안에서 #"" 하면 그 페이지안의 ""로 이동  
+  -> target="_blank"  새 페이지로 이동
 
+<figcaption> 사진에 캡션달기
+
+input 사용자에게 값을 받아오는 폼양식
+<form></form> 폼양식을 선언
+&nbsp  space 기능
+name=" " 서버에 전달될 때의 이름
+input  입력할 수 있는 칸
+  type = "text" 20자 내외 입력칸
+  submit 입력된 양식 전송
+action php 실행 언어로 서버에 전송해 동작하게 만듬
+
+textarea 긴 문장을 입력하는 칸
+   cols & row 가로 세로 글씨 적는 사이즈
+   ex)   cols = "50" 가로로 적을 수 있는 글자 수
+         rows = "4" 4줄
+button 누를 수 있는 단추, 이벤트가 발생
+select 여러개일때 드롭다운으로 한번에 보여주는 태그
+    multiple 다중으로 보이게 하는 값
+    size = "3" 3개까지만 보여주고 스크롤생김
+    option 항목
+    optgroup 항목을 그룹화
+fieldset 태그폼의 그룹화
+legend fieldset의 타이틀
+radio / 단일선택
