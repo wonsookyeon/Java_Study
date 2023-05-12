@@ -1,0 +1,134 @@
+-- 전체 테이블 조회
+SELECT *
+FROM all_tables;
+
+-- 테이블 전체 조회
+SELECT *
+FROM DEPARTMENTS;
+
+-- 특정 컬럼만 조회
+SELECT department_id, department_name
+FROM DEPARTMENTS;
+
+-- 별칭,(애칭) 사용하기
+SELECT department_id as 부서번호, department_name as 부서명
+FROM DEPARTMENTS;
+
+-- 중복제거
+SELECT  distinct location_id
+FROM DEPARTMENTS;
+
+-- 연결 연산자 (||)
+SELECT First_name || last_name as full_name
+from EMPLOYEES;
+
+-- " " 안됨  ' ' 가능 / 연결 연산자 (||)
+SELECT 'First_' || last_name as 성명
+from EMPLOYEES;
+
+-- 산술연산
+SELECT salary, salary+1000 as 인상
+from EMPLOYEES;
+
+-- 1. countries 테이블에서 컬럼명 country_id를 국가ID, country_name를 국가명으로 조회
+SELECT country_id as 국가ID, country_name as 국가명
+from countries;
+
+-- 2. countries 테이블에서 region_id를 중복제외하고 조회
+SELECT DISTINCT region_id
+from countries;
+
+-- 3. countries 테이블에서 country_name과 country_id를 연결하여 조회
+SELECT country_name || country_id
+from countries;
+
+-- 4.  jobs 테이블에서 job_title, min_salary, max_salary 컬럼을 최소연봉과 최대연봉을 10% 인상된 상태로 조회
+SELECT job_title, min_salary*1.1 as 최소연봉인상, max_salary*1.1 as 최대연봉인상
+from jobs;
+
+-- where 조건 비교연산자
+SELECT *
+from EMPLOYEES
+WHERE EMPLOYEE_ID = 110;
+
+SELECT *
+from EMPLOYEES
+WHERE EMPLOYEE_ID <> 110;
+
+SELECT *
+from EMPLOYEES
+WHERE not EMPLOYEE_ID = 110;
+
+SELECT *
+from EMPLOYEES
+WHERE EMPLOYEE_ID >= 110;
+
+SELECT *
+from EMPLOYEES
+WHERE EMPLOYEE_ID >= 110 and EMPLOYEE_ID <120;
+
+SELECT *
+from EMPLOYEES
+WHERE first_name = 'John' or last_name = 'Popp';
+
+SELECT *
+from EMPLOYEES
+WHERE not (first_name = 'John' or last_name = 'Popp');
+
+-- 1. employees 테이블에서 first_name이 'David'인 직원 조회
+SELECT *
+FROM EMPLOYEES
+WHERE first_name = 'David';
+
+-- 2. jobs 테이블에서 최소 월급이 4000 달러인 직업 조회
+SELECT *
+FROM JOBS
+WHERE MIN_SALARY = 4000;
+
+-- 3. jobs 테이블에서 최소 월급이 8000 초과인 직업 조회
+SELECT *
+FROM JOBS
+WHERE MIN_SALARY > 8000;
+
+-- 4. jobs 테이블에서 최대 월급이 10000 이하인 직업 조회
+SELECT *
+FROM JOBS
+WHERE MAX_SALARY <= 10000;
+
+-- 5. jobs 테이블에서 최소 월급이 4000 이상이고 최대 월급이 10000 이하인 직업 조회
+SELECT *
+FROM JOBS
+WHERE MIN_SALARY >= 4000 and MAX_SALARY <= 10000;
+
+-- 6. employees 테이블에서 job_id가 'IT_PROG'이면서 salary가 5000 초과인 직원 조회
+SELECT *
+FROM EMPLOYEES
+WHERE job_id = 'IT_PROG' and SALARY > 5000;
+
+-- >>>>>>>>> 정렬
+
+-- first_name 이름으로 오름차순 정렬
+SELECT first_name, last_name
+from EMPLOYEES
+ORDER BY first_name asc; -- ORDER BY first_name; asc 생략가능
+
+-- first_name 이름으로 내림차순 정렬
+SELECT first_name, last_name
+from EMPLOYEES
+ORDER BY first_name desc;
+
+-- coutry_id 1차 오름차순 정렬, 2차 city 내림차순 정렬
+SELECT country_id, city
+from LOCATIONS
+ORDER BY  COUNTRY_ID, city DESC;
+
+-- job_id가 'ST_CLERK'인 레코드 중 first_name으로 오름차순 정렬
+-- <순서기억>
+-- select
+-- from
+-- where
+-- order by
+SELECT *
+FROM EMPLOYEES
+WHERE job_id = 'ST_CLERK'
+ORDER BY first_name;
